@@ -142,3 +142,11 @@ MEDIA_ROOT= BASE_DIR.joinpath('media')
 # Caminho no site para encontrar a pasta dos arquivos físicos
 MEDIA_URL='/arquivo/'
 
+# Configurações de segurança
+## Para que os valores dos cookies só sejam aceitos pela aplicação, e não por requests externos ex: Postman
+CSRF_COOKIE_SAMESITE = 'Strict'
+SESSION_COOKIE_SAMESITE = 'Strict'
+
+# Somente durante o desenvolvimento, Production -> (True, True)
+CSRF_COOKIE_HTTPONLY = False
+SESSION_COOKIE_HTTPONLY = True
