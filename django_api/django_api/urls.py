@@ -19,6 +19,8 @@ from django.urls import path, include
 from blog.views import *
 from rest_framework import routers
 
+from django.shortcuts import render 
+
 router = routers.DefaultRouter()
 
 router.register(r'posts', PostView, 'post')
@@ -27,5 +29,6 @@ router.register(r'comments', CommentView, 'comment')
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include((router.urls, "Interface")))
+    path('', include((router.urls, "Interface"))),
+    path('api/', include('cookieauth.urls'))
 ]

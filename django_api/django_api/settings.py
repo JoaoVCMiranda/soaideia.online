@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'blog',
     'corsheaders',
     'rest_framework',
+    'cookieauth',
 ]
 
 MIDDLEWARE = [
