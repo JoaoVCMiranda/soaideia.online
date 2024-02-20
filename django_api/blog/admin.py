@@ -6,6 +6,6 @@ class PostAdmin(admin.ModelAdmin):
 
 # Register your models here.
 admin.site.register(Post,PostAdmin)
-admin.site.register(Categorias)
-admin.site.register(profile_pic)
-admin.site.register(Comments)
+admin.site.register(Categoria)
+admin.site.register(ProfilePic)
+admin.site.register(Comment)
