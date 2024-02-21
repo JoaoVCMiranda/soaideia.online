@@ -13,6 +13,9 @@ E construído dentro dessa uma aplicação react + vite.
 
 ## To-do
 
-- [ ] Backend = API endpoints
-- [ ] Vite + React App ('/<str::username>', '/blog', '/trilhas')
+- [X] Backend = API endpoints
+- [X] Vite + React App 
+- [ ] ('/blog')
+- [ ] ('/<str::username>')
+- [ ] ('/trilhas')
 - [ ] Conectar com SciSavant[API] para escrever as postagens

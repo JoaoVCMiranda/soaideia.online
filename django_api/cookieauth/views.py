@@ -38,9 +38,7 @@ def logout_view(request):
                 status=400
                 )
     logout(request)
-    return JsonResponse(
-            {"detail":"Já vai tarde"}
-            )
+    return JsonResponse({"detail":"Já vai tarde"})
 
 @ensure_csrf_cookie 
 def session_view(req):

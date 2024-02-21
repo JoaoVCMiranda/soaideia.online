@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-*gecu!1uk=^!eu_(fmz=x1(vb2-us^aw5c!82q2f&)6^k)%*(_
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost']
 ## Precisa ser definido para que o REACT poder interagir com o backend
 CORS_ORIGIN_WHITELIST = ['http://localhost:3000']
 
@@ -61,7 +61,7 @@ ROOT_URLCONF = 'django_api.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR.joinpath('frontend')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -150,3 +150,7 @@ SESSION_COOKIE_SAMESITE = 'Strict'
 # Somente durante o desenvolvimento, Production -> (True, True)
 CSRF_COOKIE_HTTPONLY = False
 SESSION_COOKIE_HTTPONLY = True
+
+STATICFILES_DIRS = [
+    BASE_DIR.joinpath('frontend', 'dist'),
+]

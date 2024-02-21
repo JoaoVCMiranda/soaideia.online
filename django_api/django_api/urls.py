@@ -26,9 +26,12 @@ router = routers.DefaultRouter()
 router.register(r'posts', PostView, 'post')
 router.register(r'comments', CommentView, 'comment')
 
+def indexView(req):
+    return render(req, 'dist/index.html')
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', include((router.urls, "Interface"))),
-    path('api/', include('cookieauth.urls'))
+    path('api/', include((router.urls, "Interface"))),
+    path('api/', include('cookieauth.urls')), 
+    path('', indexView, name="index")
 ]
