@@ -2,8 +2,13 @@ import  React  from "react";
 import Cookies from "universal-cookie";
 import axios from "axios";
 
-const cookie = new Cookies();
+import "./styles/Main.css"
 
+import Menu from "./components/Menu"
+import HomePost from "./components/HomePost"
+
+
+const cookie = new Cookies();
 
 class App extends React.Component{
 	
@@ -130,10 +135,13 @@ class App extends React.Component{
 	renderPosts = () =>{
 		const posts = this.state.posts;
 		return posts.map( p => (
-			<li key={p.id}>
-				<h2>{p.title}</h2>
-				<span>{p.content}</span>
-			</li>
+			<HomePost 
+				id={p.id} 
+				title={p.title} 
+				content={p.content} 
+				descr={p.descr}
+				date={p.date}
+			/>
 		))
 	}
 	render(){
@@ -141,7 +149,8 @@ class App extends React.Component{
 			// Não haverá o componente de login 
 			return(
 				<div>
-				<h1 >Só a Ideia - Online</h1>
+				<Menu />
+				<h1 className="text-center m-5">Só a Ideia - Online</h1>
 				{this.renderPosts()}
 				</div>
 			); 

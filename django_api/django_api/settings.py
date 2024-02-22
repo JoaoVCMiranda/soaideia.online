@@ -26,8 +26,8 @@ SECRET_KEY = 'django-insecure-*gecu!1uk=^!eu_(fmz=x1(vb2-us^aw5c!82q2f&)6^k)%*(_
 DEBUG = True
 
 ALLOWED_HOSTS = ['localhost']
-## Precisa ser definido para que o REACT poder interagir com o backend
-CORS_ORIGIN_WHITELIST = ['http://localhost:3000']
+## Precisa ser definido para que o REACT poder interagir com o backend via axios
+#CORS_ORIGIN_WHITELIST = ['http://localhost:3000']
 
 
 # Application definition

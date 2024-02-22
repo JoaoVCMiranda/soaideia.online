@@ -1,0 +1,32 @@
+nav{
+	display:flex;
+	flex: 1;
+	font-size:1em;
+	list-style: none;
+	flex-direction: row;
+	text-decoration: none;
+	margin: 0;
+}
+li{
+	flex: 1;
+	padding: 2em;
+}
+a{
+	flex:1;
+	text-decoration: none;
+	color: black;
+}
+li.home{
+	background-color: #2197f0;
+}
+li.trilhas{
+	background-color: #4782b4;
+}
+li.blog{
+	background-color: #020090;
+}
+nav li:hover{
+	transition: 1s;
+	background-color: black;
+	color: white;
+}

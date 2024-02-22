@@ -14,6 +14,7 @@ E construído dentro dessa uma aplicação react + vite.
 ## To-do
 
 - [X] Backend = API endpoints
+- [ ] Resolver problema dos emojis
 - [X] Vite + React App 
 - [ ] ('/blog')
 - [ ] ('/<str::username>')
