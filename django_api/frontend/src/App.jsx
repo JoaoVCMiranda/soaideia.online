@@ -145,23 +145,13 @@ class App extends React.Component{
 		))
 	}
 	render(){
-		if(!this.state.isAuthenticated){
-			// Não haverá o componente de login 
-			return(
-				<div>
-				<Menu />
-				<h1 className="text-center m-5">Só a Ideia - Online</h1>
-				{this.renderPosts()}
-				</div>
-			); 
-		}
+		// Não haverá o componente de login 
 		return(
 			<div>
-			{this.whoami()}
-			<p>Tamo dentro</p>
-			<p>( ͡° ͜ʖ ͡°)</p>
+				<h1 className="text-center m-5">Só a Ideia - Online</h1>
+			{this.renderPosts()}
 			</div>
-		)
+			); 
 
 	}
 }
